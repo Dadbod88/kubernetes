@@ -95,6 +95,7 @@ func init() {
 
 // NewAPIServerCommand creates a *cobra.Command object with default parameters
 func NewAPIServerCommand(stopCh <-chan struct{}) *cobra.Command {
+	fmt.Println("Starting kubernetes API server")
 	s := options.NewServerRunOptions()
 	cmd := &cobra.Command{
 		Use: "kube-apiserver",
